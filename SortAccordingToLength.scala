@@ -21,6 +21,7 @@ object SortAccordingToLength {
   def lsortFreq1[A](ls: List[List[A]]): List[List[A]] = {
     val freqs = Map(encode(ls map(_.length) sorted) map(_.swap): _*)
     ls sortBy(x => freqs(x.length))
+    
   }
 
   def lsortFreq2[A](ls: List[List[A]]): List[List[A]] = 
