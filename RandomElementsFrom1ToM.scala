@@ -2,7 +2,7 @@
 
 object RandomElementsFrom1ToM {
   def remove[A](n : Int, l : List[A]) : (List[A],A) = {
-    (l.take(n):::l.takeRight(l.length-n),l(n))
+    (l.take(n):::l.takeRight(l.length-n-1),l(n))
   }
   def randomSelect[A](n: Int, ls: List[A]): List[A] = {
     if (n <= 0) Nil

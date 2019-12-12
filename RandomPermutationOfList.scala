@@ -1,6 +1,6 @@
 
 
-object ReturnElementsRandomly {
+object RandomPermutationOfList {
   def remove[A](n : Int, l : List[A]) : (List[A],A) = {
     (l.take(n):::l.takeRight(l.length-n-1),l(n))
   }
@@ -11,10 +11,13 @@ object ReturnElementsRandomly {
       e :: randomSelect(n - 1, rest)
     }
   }
+   def randomPermute[A](ls: List[A]): List[A] = {
+    randomSelect(ls.length, ls)
+  }
   def main(args: Array[String]): Unit = {
     val list = List(1,2,3,4,4,5);
     print(list)
     print("\n")
-    print(randomSelect(2,list))
+    print(randomPermute(list))
   }
 }
