@@ -24,7 +24,7 @@ object EulerTotientImproved {
    def totient(start : Int): Int = listPrimes(start).foldLeft(1) { (r, f) =>
     f match { case (p, m) => r * (p - 1) * Math.pow(p, m - 1).toInt }
   }
-   def main(args: Array[String]): Unit = {
+   def main(args: Array[String]): Unit = { 
      val a = 10;
      print(totient(a))
    }
