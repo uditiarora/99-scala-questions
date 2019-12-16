@@ -9,6 +9,7 @@ object SortAccordingToLength {
       else packed :: pack(next)
     }
   }
+   
    def encode[A](ls: List[A]): List[(Int, A)] =
     pack(ls) map { e => (e.length, e.head) 
    }
